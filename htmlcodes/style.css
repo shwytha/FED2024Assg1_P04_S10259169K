@@ -3,14 +3,18 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    color: #ffffff;
+    background-image: url('paper.jpg'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-position: center; /* Centers the image */
+    margin: 0; /* Removes default body margin for a cleaner look */
   }
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #0f0e14;
     color: #fff;
     padding: 30px;
     text-align: left;
@@ -34,10 +38,13 @@ nav {
 /*----------------------------------------------------------------------------------------------*/  
 /* Main */
 .welcome-image img {
-    width: 100%; /* Make the image take up 100% of its container's width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image fills the container without distortion */
+  width: 100%; /* Optional: Make the width responsive */
+  height: 455px; /* Set the desired height */
+  object-fit: cover; /* Ensures the image scales nicely to fit both dimensions */
 }
+
+
+
 
 h2 {
     margin-top: 0;
@@ -57,11 +64,12 @@ p {
     color: #fff;
 }
 
-/*----------------------------------------------------------------------------------------------*/  
+/*----------------------------------------------------------------------------------------------*/
 /* Sign up */
 footer {
-  background-color: #000000;
+  background-color: #282828;
   padding: 10px 20px; /* Reduced padding for a smaller footer */
+  position: relative; /* Enable absolute positioning for child elements */
 }
 
 .sign-up-container {
@@ -116,26 +124,28 @@ button:hover {
 
 .copyright {
   text-align: left; /* Align copyright to the left */
-  margin-top: 10px;
   font-size: 12px;
   color: #fff;
+  display: inline-block; /* Align inline with social icons */
+  margin-top: 0;
 }
 
-/*----------------------------------------------------------------------------------------------*/  
+/*----------------------------------------------------------------------------------------------*/
 /* Footer Social Media */
 /* Container for all icons */
 .social-icons {
   display: flex;
-  justify-content: center;
-  gap: 15px; /* Space between icons */
-  margin-top: 20px;
+  gap: 10px; /* Smaller space between icons */
+  position: absolute; /* Positioning relative to the footer */
+  bottom: 10px; /* Align to the bottom of the footer */
+  right: 20px; /* Align to the right of the footer */
 }
 
 /* Styling for individual social media icons */
 .social-icon {
   display: inline-block;
-  width: 50px; /* Adjust size as needed */
-  height: 50px;
+  width: 30px; /* Smaller icon size */
+  height: 30px;
 }
 
 .social-icon img {
