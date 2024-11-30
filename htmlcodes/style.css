@@ -75,32 +75,31 @@ p {
   display: flex;
   justify-content: center; /* Centers the icons horizontally */
   align-items: center; /* Vertically aligns the icons */
-  gap: 55px; /* Increased space between each icon */
+  gap: 70px; /* Space between each icon group */
   position: absolute; /* Positions the section at the bottom of the image */
-  bottom: 30px; /* Adjust the distance from the bottom of the image */
+  bottom: 23px; /* Distance from the bottom of the image */
   width: 100%; /* Ensures the section spans the full width of the image */
 }
 
 .social-icon {
   display: flex;
-  flex-direction: column; /* Ensures the icon and the name stack vertically */
-  align-items: center; /* Centers the content (icon and name) horizontally */
+  align-items: center; /* Aligns the icon and the name horizontally */
   text-decoration: none; /* Removes default link styling */
   color: inherit; /* Inherits color from parent */
 }
 
 .social-icon img {
-  width: 40px; /* Increased size of the icons */
+  width: 40px; /* Size of the icon */
   height: 40px; /* Ensures the icons maintain their aspect ratio */
-  margin-bottom: 10px; /* Increased space between the icon and the name */
+  margin-right: 10px; /* Adds space between the icon and the name */
 }
 
 .social-name {
-  font-size: 14px; /* Increased font size for the social media name */
+  font-size: 14px; /* Size of the social media name */
   text-transform: uppercase; /* Optional: Makes the text uppercase */
-  color: white; /* Sets the color of the name text */
+  color: rgb(255, 255, 255); /* Color of the name text */
+  font-weight: bold; 
 }
-
 
 /*----------------------------------------------------------------------------------------------*/  
 /* Sign up */
@@ -208,3 +207,7 @@ button:hover {
 .social-icon img:hover {
   transform: scale(1.4); /* Slight zoom-in effect */
 }                      
+
+/*----------------------------------------------------------------------------------------------*/
+/* Us */
+
