@@ -67,49 +67,38 @@ p {
   color: #fff;
 }
 
-/* Ensure the image is contained and set the parent div */
 .welcome-image {
-  position: relative; /* Allows the positioning of child elements */
+  position: relative;
 }
 
-/* Position the social media icons at the bottom of the image */
 .social-media-bottom {
-  position: absolute;
-  bottom: 20px; /* Adjust the space from the bottom of the image */
-  left: 50%; /* Center from the left */
-  transform: translateX(-50%); /* Center horizontally */
-  display: flex; /* Align icons in a row */
-  justify-content: center; /* Center icons horizontally */
-  gap: 20px; /* Space between icons */
+  display: flex;
+  justify-content: center; /* Centers the icons horizontally */
+  align-items: center; /* Vertically aligns the icons */
+  gap: 55px; /* Increased space between each icon */
+  position: absolute; /* Positions the section at the bottom of the image */
+  bottom: 30px; /* Adjust the distance from the bottom of the image */
+  width: 100%; /* Ensures the section spans the full width of the image */
 }
 
-/* Style the individual social media icon links */
 .social-icon {
   display: flex;
-  align-items: center; /* Vertically align the icon and text */
-  gap: 10px; /* Space between icon and text */
-  color: white; /* Set the text color */
-  font-size: 16px; /* Set the font size for the social media names */
-  text-decoration: none; /* Remove underlines from the links */
+  flex-direction: column; /* Ensures the icon and the name stack vertically */
+  align-items: center; /* Centers the content (icon and name) horizontally */
+  text-decoration: none; /* Removes default link styling */
+  color: inherit; /* Inherits color from parent */
 }
 
-/* Style for each social media icon (make them circular) */
 .social-icon img {
-  width: 30px; /* Set the size of the icon */
-  height: 30px; /* Set the size of the icon */
-  object-fit: cover; /* Ensure the icon fits within the circle */
-  border-radius: 50%; /* Make the icon circular */
+  width: 40px; /* Increased size of the icons */
+  height: 40px; /* Ensures the icons maintain their aspect ratio */
+  margin-bottom: 10px; /* Increased space between the icon and the name */
 }
 
-/* Optional: Adjust the font size and styling of the names */
 .social-name {
-  font-size: 16px; /* Set the font size */
-  font-weight: bold; /* Make the name bold */
-}
-
-/* Prevent text from wrapping */
-.social-icon span {
-  white-space: nowrap;
+  font-size: 14px; /* Increased font size for the social media name */
+  text-transform: uppercase; /* Optional: Makes the text uppercase */
+  color: white; /* Sets the color of the name text */
 }
 
 
