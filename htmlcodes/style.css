@@ -1,70 +1,119 @@
 /* styles.css */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #ffffff;
-    background-image: url('paper.jpg'); /* Path to your image */
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-repeat: no-repeat; /* Prevents tiling */
-    background-position: center; /* Centers the image */
-    margin: 0; /* Removes default body margin for a cleaner look */
-  }
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0f0e14;
-    color: #fff;
-    padding: 30px;
-    text-align: left;
-    font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  background-image: url('paper.jpg'); /* Path to your image */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-position: center; /* Centers the image */
+  margin: 0; /* Removes default body margin for a cleaner look */
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f0e14;
+  color: #fff;
+  padding: 30px;
+  text-align: left;
+  font-weight: bold;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav {
-    display: flex; /* Make nav a flex container */
-    align-items: center; /* Align items vertically */
+  display: flex; /* Make nav a flex container */
+  align-items: center; /* Align items vertically */
 }
-  nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  nav a:hover {
-    text-decoration: underline;
-  }
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
 
 /*----------------------------------------------------------------------------------------------*/  
 /* Main */
 .welcome-image img {
-  width: 100%; /* Optional: Make the width responsive */
-  height: 455px; /* Set the desired height */
-  object-fit: cover; /* Ensures the image scales nicely to fit both dimensions */
+width: 100%; /* Optional: Make the width responsive */
+height: 455px; /* Set the desired height */
+object-fit: cover; /* Ensures the image scales nicely to fit both dimensions */
 }
 
-
-
-
 h2 {
-    margin-top: 0;
-    text-align: center;
+  margin-top: 0;
+  text-align: center;
 }
 
 .container {
-    background-color: #131313; /* Subtle background color */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Padding around the paragraph */
-    margin: 20px; /* Margin around the container */
+  background-color: #131313; /* Subtle background color */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding around the paragraph */
+  margin: 20px; /* Margin around the container */
 }
 
 p {
-    margin-bottom: 20px;
-    text-align: center;
-    color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
 }
 
-/*----------------------------------------------------------------------------------------------*/
+/* Ensure the image is contained and set the parent div */
+.welcome-image {
+  position: relative; /* Allows the positioning of child elements */
+}
+
+/* Position the social media icons at the bottom of the image */
+.social-media-bottom {
+  position: absolute;
+  bottom: 20px; /* Adjust the space from the bottom of the image */
+  left: 50%; /* Center from the left */
+  transform: translateX(-50%); /* Center horizontally */
+  display: flex; /* Align icons in a row */
+  justify-content: center; /* Center icons horizontally */
+  gap: 20px; /* Space between icons */
+}
+
+/* Style the individual social media icon links */
+.social-icon {
+  display: flex;
+  align-items: center; /* Vertically align the icon and text */
+  gap: 10px; /* Space between icon and text */
+  color: white; /* Set the text color */
+  font-size: 16px; /* Set the font size for the social media names */
+  text-decoration: none; /* Remove underlines from the links */
+}
+
+/* Style for each social media icon (make them circular) */
+.social-icon img {
+  width: 30px; /* Set the size of the icon */
+  height: 30px; /* Set the size of the icon */
+  object-fit: cover; /* Ensure the icon fits within the circle */
+  border-radius: 50%; /* Make the icon circular */
+}
+
+/* Optional: Adjust the font size and styling of the names */
+.social-name {
+  font-size: 16px; /* Set the font size */
+  font-weight: bold; /* Make the name bold */
+}
+
+/* Prevent text from wrapping */
+.social-icon span {
+  white-space: nowrap;
+}
+
+
+/*----------------------------------------------------------------------------------------------*/  
 /* Sign up */
 footer {
   background-color: #282828;
@@ -73,7 +122,7 @@ footer {
 }
 
 .sign-up-container {
-  text-align: left; /* Align content to the left */
+  text-align: center;
   color: #fff;
   margin-bottom: 10px;
 }
@@ -96,15 +145,24 @@ form {
 
 input[type="email"], select {
   padding: 8px;
-  width: 31%; /* Ensure both are equal width */
+  width: 34%; /* Ensure both are equal width */
   min-width: 200px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
+/* Align checkbox and submit button on the same line */
+.form-row {
+  display: flex; /* Use flexbox to align items in a row */
+  align-items: center; /* Vertically align checkbox and button */
+  gap: 10px; /* Space between the checkbox and button */
+}
+
 label {
-  text-align: left;
-  font-size: 14px;
+  font-size: 14px; /* Adjust label font size */
+  display: flex;
+  align-items: center; /* Vertically align checkbox and label text */
+  gap: 5px; /* Space between checkbox and label text */
 }
 
 button {
@@ -115,12 +173,13 @@ button {
   cursor: pointer;
   border-radius: 4px;
   font-size: 14px;
-  width: 5%;
+  height: auto; /* Ensure the height adjusts naturally */
 }
 
 button:hover {
   background-color: #0056b3;
 }
+
 
 .copyright {
   text-align: left; /* Align copyright to the left */
@@ -158,5 +217,5 @@ button:hover {
 
 /* Hover effect for the icons */
 .social-icon img:hover {
-  transform: scale(1.1); /* Slight zoom-in effect */
-}
+  transform: scale(1.4); /* Slight zoom-in effect */
+}                      
