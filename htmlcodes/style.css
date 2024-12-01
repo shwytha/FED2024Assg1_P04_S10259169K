@@ -1,4 +1,6 @@
 /* styles.css */
+/*----------------------------------------------------------------------------------------------*/ 
+/* Navigation */
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -41,8 +43,112 @@ nav a:hover {
   text-decoration: underline;
 }
 
+
+/*----------------------------------------------------------------------------------------------*/ 
+/* Footer */ 
+/* Sign up */
+footer {
+  background-color: #282828;
+  padding: 10px 20px; /* Reduced padding for a smaller footer */
+  position: relative; /* Enable absolute positioning for child elements */
+}
+
+.sign-up-container {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.sign-up-title {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  gap: 10px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px; /* Space between email and country fields */
+}
+
+input[type="email"], select {
+  padding: 8px;
+  width: 34%; /* Ensure both are equal width */
+  min-width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-row {
+  display: flex; /* Use flexbox to align items in a row */
+  align-items: center; /* Vertically align checkbox and button */
+  gap: 10px; /* Space between the checkbox and button */
+}
+
+label {
+  font-size: 14px; /* Adjust label font size */
+  display: flex;
+  align-items: center; /* Vertically align checkbox and label text */
+  gap: 5px; /* Space between checkbox and label text */
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  height: auto; /* Ensure the height adjusts naturally */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.copyright {
+  text-align: left; /* Align copyright to the left */
+  font-size: 12px;
+  color: #fff;
+  display: inline-block; /* Align inline with social icons */
+  margin-top: 0;
+}
+
+/* Footer Social Media */
+.social-icons {
+  display: flex;
+  gap: 10px; /* Smaller space between icons */
+  position: absolute; /* Positioning relative to the footer */
+  bottom: 10px; /* Align to the bottom of the footer */
+  right: 20px; /* Align to the right of the footer */
+}
+
+.social-icon { /* Styling for individual social media icons */
+  display: inline-block;
+  width: 30px; /* Smaller icon size */
+  height: 30px;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fits nicely */
+  border-radius: 50%; /* Optional, for circular icons */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-icon img:hover { /* Hover effect for the icons */
+  transform: scale(1.4); /* Slight zoom-in effect */
+}                      
+
+
 /*----------------------------------------------------------------------------------------------*/  
-/* Main */
+/* Home Page */
 .welcome-image img {
 width: 100%; /* Optional: Make the width responsive */
 height: 455px; /* Set the desired height */
@@ -101,113 +207,251 @@ p {
   font-weight: bold; 
 }
 
-/*----------------------------------------------------------------------------------------------*/  
-/* Sign up */
-footer {
-  background-color: #282828;
-  padding: 10px 20px; /* Reduced padding for a smaller footer */
-  position: relative; /* Enable absolute positioning for child elements */
+
+/*----------------------------------------------------------------------------------------------*/
+/* Us*/
+main {
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+  gap: 20px; /* Add space between sections */
+  width: 100%; /* Ensure the sections span the full width */
+  margin: 0 auto; /* Center the main container */
 }
 
-.sign-up-container {
-  text-align: center;
-  color: #fff;
+section { /* Section styling */
+  display: flex;
+  align-items: center; /* Align content vertically */
+  justify-content: center; /* Center content horizontally */
+  gap: 20px; /* Space between image and text */
+  width: 100%; /* Full-width sections */
+  max-width: 1200px; /* Limit section width */
+  margin: 0 auto; /* Center the sections */
+}
+
+section img { /* Image styling */
+  width: 50%; /* Half the page */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure proper fit without distortion */
+  border-radius: 10px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Subtle shadow */
+}
+
+section .description { /* Description container styling */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center text vertically */
+  align-items: center; /* Center text horizontally */
+  width: 50%; /* Half the page */
+  text-align: center; /* Center-align the text */
+  color: white; /* White text for contrast */
+  padding: 20px; /* Add padding for spacing */
+}
+
+section h2 { /* Description container styling */
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffffff; /* Optional: Golden color for emphasis */
+  text-transform: uppercase; /* Make headings uppercase */
+}
+
+section p { /* Paragraph styling */
+  font-size: 18px;
+  line-height: 1.6;
+  color: #f0f0f0; /* Light gray text */
+}
+
+section { /* Default layout (image left, text right) */
+  flex-direction: row; /* Default: Image on the left, description on the right */
+}
+
+section:nth-child(even) { /* For even sections, image right, description left */
+  flex-direction: row-reverse; /* Reverse the layout */
+}
+
+@media screen and (max-width: 768px) { /* Responsive styling for smaller screens */
+  section {
+    flex-direction: column; /* Stack image and description vertically */
+  }
+  section img,
+  section .description {
+    width: 100%; /* Make both elements full width */
+  }
+  section p {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}
+
+
+/*---------------------------------------------------------------------------------------*/
+
+
+.main-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Left Section Styling */
+.left-section {
+  flex: 1;
+  max-width: 40%;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.left-section h2 {
+  font-size: 24px;
+  color: #333;
   margin-bottom: 10px;
 }
 
-.sign-up-title {
+.left-section p,
+.left-section ul {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.left-section ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+/* Right Section Styling */
+.right-section {
+  flex: 2;
+  max-width: 60%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.right-section h3,
+.right-section h4 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.right-section p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
   margin-bottom: 15px;
-  font-size: 18px;
-}
-
-form {
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  gap: 10px;
-}
-
-.form-row {
-  display: flex;
-  gap: 10px; /* Space between email and country fields */
-}
-
-input[type="email"], select {
-  padding: 8px;
-  width: 34%; /* Ensure both are equal width */
-  min-width: 200px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* Align checkbox and submit button on the same line */
-.form-row {
-  display: flex; /* Use flexbox to align items in a row */
-  align-items: center; /* Vertically align checkbox and button */
-  gap: 10px; /* Space between the checkbox and button */
-}
-
-label {
-  font-size: 14px; /* Adjust label font size */
-  display: flex;
-  align-items: center; /* Vertically align checkbox and label text */
-  gap: 5px; /* Space between checkbox and label text */
-}
-
-button {
-  padding: 8px 15px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 14px;
-  height: auto; /* Ensure the height adjusts naturally */
-}
-
-button:hover {
-  background-color: #0056b3;
 }
 
 
-.copyright {
-  text-align: left; /* Align copyright to the left */
-  font-size: 12px;
-  color: #fff;
-  display: inline-block; /* Align inline with social icons */
-  margin-top: 0;
+
+
+
+
+
+/* General Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light background for better contrast */
+  color: #333;
 }
 
-/*----------------------------------------------------------------------------------------------*/
-/* Footer Social Media */
-/* Container for all icons */
-.social-icons {
-  display: flex;
-  gap: 10px; /* Smaller space between icons */
-  position: absolute; /* Positioning relative to the footer */
-  bottom: 10px; /* Align to the bottom of the footer */
-  right: 20px; /* Align to the right of the footer */
+/* Info Box Styles */
+.info-box {
+  width: 300px; /* Set the width of the box */
+  padding: 20px;
+  margin-left: 20px; /* Position it towards the left with some spacing */
+
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-/* Styling for individual social media icons */
-.social-icon {
-  display: inline-block;
-  width: 30px; /* Smaller icon size */
-  height: 30px;
+.info-box h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #444; /* Slightly darker for emphasis */
 }
 
-.social-icon img {
+.info-box p {
+  margin: 5px 0;
+}
+
+.info-box ul {
+  list-style-type: disc; /* Bullet points for list */
+  margin: 10px 0 0 20px; /* Indent list items */
+  padding: 0;
+}
+
+.info-box ul li {
+  margin-bottom: 5px;
+}
+
+/* Separator Line */
+.info-box::after {
+  content: "";
+  display: block;
+  height: 2px;
+
+  margin-top: 20px; /* Spacing before the line */
+}
+
+/* Image Styles */
+.band-image {
+  display: block;
+  margin-top: 15px; /* Spacing from the text above */
+  max-width: 100%; /* Ensures the image fits within the container */
+  height: auto; /* Maintain the image aspect ratio */
+  border-radius: 8px; /* Optional: rounded corners for the image */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: shadow for the image */
+}
+
+
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+main {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px;
+}
+
+.image-grid img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image fits nicely */
-  border-radius: 50%; /* Optional, for circular icons */
-  transition: transform 0.3s ease; /* Smooth hover effect */
+  height: 200px; /* Adjust height as needed */
+  object-fit: cover;
 }
 
-/* Hover effect for the icons */
-.social-icon img:hover {
-  transform: scale(1.4); /* Slight zoom-in effect */
-}                      
+.new-video {
+  text-align: center;
+  margin-top: 40px;
+}
 
-/*----------------------------------------------------------------------------------------------*/
-/* Us */
+.new-video iframe {
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+}
+
+
+
+
+
+
+
 
