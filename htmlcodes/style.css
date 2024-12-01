@@ -299,7 +299,7 @@ section:nth-child(even) { /* For even sections, image right, description left */
   font-size: 24px;
   cursor: pointer;
   display: none; /* Initially hidden */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(217, 217, 217, 0.1);
   z-index: 100;
   max-width: 100%;  /* Prevents the button from exceeding the width */
 }
@@ -419,7 +419,6 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
 }
 
 main {
