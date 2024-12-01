@@ -453,6 +453,9 @@ h1 {
   height: 300px; /* Adjust height as needed */
 }
 
+
+
+/*--------------------------------------------------------------*/
 /* Mobile Version */
 @media screen and (max-width: 768px) {
   body {
@@ -505,21 +508,15 @@ h1 {
   }
 
   .image-grid {
-    grid-template-columns: repeat(2, 
+    grid-template-columns: repeat(2, 1fr); /* Change to two columns */
+  }
 
+  footer {
+    padding: 20px 10px;
+    text-align: center; /* Center text in footer */
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .sign-up-container {
+    margin-bottom: 20px;
+  }
+}
