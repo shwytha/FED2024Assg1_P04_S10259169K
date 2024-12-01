@@ -151,8 +151,12 @@ button:hover {
 /* Home Page */
 .welcome-image img {
 width: 100%; /* Optional: Make the width responsive */
-height: 455px; /* Set the desired height */
+height: 450px; /* Set the desired height */
 object-fit: cover; /* Ensures the image scales nicely to fit both dimensions */
+}
+
+.welcome-image {
+  position: relative;
 }
 
 h2 {
@@ -173,15 +177,11 @@ p {
   color: #fff;
 }
 
-.welcome-image {
-  position: relative;
-}
-
 .social-media-bottom {
   display: flex;
   justify-content: center; /* Centers the icons horizontally */
   align-items: center; /* Vertically aligns the icons */
-  gap: 70px; /* Space between each icon group */
+  gap: 120px; /* Space between each icon group */
   position: absolute; /* Positions the section at the bottom of the image */
   bottom: 23px; /* Distance from the bottom of the image */
   width: 100%; /* Ensures the section spans the full width of the image */
@@ -210,7 +210,7 @@ p {
 
 /*----------------------------------------------------------------------------------------------*/
 /* Us*/
-main {
+.main-us {
   display: flex;
   flex-direction: column; /* Stack sections vertically */
   gap: 20px; /* Add space between sections */
@@ -283,63 +283,7 @@ section:nth-child(even) { /* For even sections, image right, description left */
 
 
 /*---------------------------------------------------------------------------------------*/
-
-
-.main-container {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-/* Left Section Styling */
-.left-section {
-  flex: 1;
-  max-width: 40%;
-  padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
-
-.left-section h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.left-section p,
-.left-section ul {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
-}
-
-.left-section ul {
-  padding-left: 20px;
-  list-style-type: disc;
-}
-
-/* Right Section Styling */
-.right-section {
-  flex: 2;
-  max-width: 60%;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
-
-.right-section h3,
-.right-section h4 {
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.right-section p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 15px;
-}
+/* Our Story*/
 
 
 
@@ -347,69 +291,8 @@ section:nth-child(even) { /* For even sections, image right, description left */
 
 
 
-/* General Styles */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4; /* Light background for better contrast */
-  color: #333;
-}
-
-/* Info Box Styles */
-.info-box {
-  width: 300px; /* Set the width of the box */
-  padding: 20px;
-  margin-left: 20px; /* Position it towards the left with some spacing */
-
-  border-radius: 8px; /* Add rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.info-box h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #444; /* Slightly darker for emphasis */
-}
-
-.info-box p {
-  margin: 5px 0;
-}
-
-.info-box ul {
-  list-style-type: disc; /* Bullet points for list */
-  margin: 10px 0 0 20px; /* Indent list items */
-  padding: 0;
-}
-
-.info-box ul li {
-  margin-bottom: 5px;
-}
-
-/* Separator Line */
-.info-box::after {
-  content: "";
-  display: block;
-  height: 2px;
-
-  margin-top: 20px; /* Spacing before the line */
-}
-
-/* Image Styles */
-.band-image {
-  display: block;
-  margin-top: 15px; /* Spacing from the text above */
-  max-width: 100%; /* Ensures the image fits within the container */
-  height: auto; /* Maintain the image aspect ratio */
-  border-radius: 8px; /* Optional: rounded corners for the image */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: shadow for the image */
-}
-
-
-
-
-
-
+/*---------------------------------------------------------------------------------------*/
+/* Gallery*/
 body {
   font-family: Arial, sans-serif;
   margin: 0;
