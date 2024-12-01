@@ -281,15 +281,53 @@ section:nth-child(even) { /* For even sections, image right, description left */
   }
 }
 
+/*----------------------------------------------------------------------------------------------*/
+/* Our Story Section */
+.our-story {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px; /* Adjust as needed */
+}
 
-/*---------------------------------------------------------------------------------------*/
-/* Our Story*/
+.band-info {
+  width: 70%; /* Adjust width as needed */
+  padding: 20px;
+  border: 1px solid #2e2e2e;
+  box-sizing: border-box;
+  background-color: #00000065; /* Add a light background color */
+}
 
+.band-summary {
+  text-align: center;
+}
 
+.band-summary img {
+  max-width: 100%;
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  margin-bottom: 20px;
+}
 
+.band-origin, .band-albums {
+  padding: 20px;
+  line-height: 1.6; /* Adjust line height for better readability */
+}
 
+.band-origin h2, .band-albums h2 {
+  margin-top: 0;
+  font-size: 1.2em; /* Adjust font size as needed */
+  font-weight: bold;
+}
 
+.band-origin p, .band-albums p {
+  margin-bottom: 10px;
+}
 
+/* Optional: Add a subtle hover effect to album covers */
+.band-summary img:hover {
+  transform: scale(1.05);
+}
 
 /*---------------------------------------------------------------------------------------*/
 /* Gallery*/
