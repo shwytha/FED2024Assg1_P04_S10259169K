@@ -283,51 +283,97 @@ section:nth-child(even) { /* For even sections, image right, description left */
 
 /*----------------------------------------------------------------------------------------------*/
 /* Our Story Section */
-.our-story {
+/* Container to align both sections side by side */
+.container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 50px; /* Adjust as needed */
+  justify-content: space-between; /* Aligns the sections with space between */
+  align-items: flex-start; /* Aligns sections at the top */
+  margin: 20px; /* Adds margin around the container */
+  width: 90%; /* Adjust width to take up more of the available space */
+  max-width: 1200px; /* Optional: Limits the container width to a max value */
+  padding: 30px; /* Adds padding inside the container */
 }
 
-.band-info {
-  width: 70%; /* Adjust width as needed */
-  padding: 20px;
-  border: 1px solid #2e2e2e;
-  box-sizing: border-box;
-  background-color: #00000065; /* Add a light background color */
-}
-
+/* Left section background */
 .band-summary {
-  text-align: center;
+  flex: 1;
+  text-align: left;
+  padding: 20px; /* Optional: adds padding inside the box */
+  border-radius: 8px; /* Optional: adds rounded corners */
 }
 
-.band-summary img {
-  max-width: 100%;
-  border-radius: 5px; /* Add rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  margin-bottom: 20px;
+/* Right section background */
+.band-history {
+  flex: 1;
+  text-align: left;
+  margin-left: 20px;
+  padding: 20px; /* Optional: adds padding inside the box */
+  border-radius: 8px; /* Optional: adds rounded corners */
 }
 
-.band-origin, .band-albums {
-  padding: 20px;
-  line-height: 1.6; /* Adjust line height for better readability */
+.band-summary .band-title {
+  font-size: 18px; /* Increased font size for title */
+  font-weight: bold;
+  margin-bottom: 15px; /* Adjusted margin for more space */
+  text-align: left;
 }
 
-.band-origin h2, .band-albums h2 {
-  margin-top: 0;
-  font-size: 1.2em; /* Adjust font size as needed */
+.band-summary .formation-year,
+.band-summary .origin,
+.band-summary .members-title {
+  font-size: 18px; /* Increased font size */
+  margin-bottom: 10px; /* More margin for better spacing */
+  text-align: left;
   font-weight: bold;
 }
 
-.band-origin p, .band-albums p {
-  margin-bottom: 10px;
+.band-summary .members-list {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-/* Optional: Add a subtle hover effect to album covers */
-.band-summary img:hover {
-  transform: scale(1.05);
+.band-summary .members-list li {
+  font-size: 16px; /* Increased font size */
+  margin-bottom: 6px; /* Increased margin */
 }
+
+.band-summary .album-section {
+  margin-top: 30px; /* More spacing between sections */
+}
+
+.band-summary .album-title {
+  font-size: 18px; /* Increased font size */
+  font-weight: bold;
+  margin-bottom: 12px; /* Adjusted margin */
+}
+
+.band-summary .album-cover {
+  width: 40%;
+  height: auto;
+  margin-bottom: 30px; /* Increased margin for more space */
+}
+
+
+.band-history .origin-title,
+.band-history .album-header {
+  font-size: 18px; /* Increased font size */
+  font-weight: bold;
+  margin-bottom: 12px; /* Adjusted margin for spacing */
+  text-align: left;
+}
+
+.band-history .origin-details,
+.band-history .album-details {
+  font-size: 16px; /* Increased font size */
+  margin-bottom: 18px; /* Adjusted margin */
+  text-align: left;
+}
+
+.band-history .band-origin,
+.band-history .band-albums {
+  margin-bottom: 25px; /* Increased margin for better spacing */
+}
+
 
 /*---------------------------------------------------------------------------------------*/
 /* Gallery*/
