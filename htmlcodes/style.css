@@ -16,7 +16,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0f0e14;
+  background-color: #000000;
   color: #fff;
   padding: 30px;
   text-align: left;
@@ -164,12 +164,15 @@ h2 {
   text-align: center;
 }
 
-.container {
-  background-color: #131313; /* Subtle background color */
+.container-box {
+  background-color: #000000; /* Subtle background color */
   border-radius: 10px; /* Rounded corners */
   padding: 20px; /* Padding around the paragraph */
-  margin: 20px; /* Margin around the container */
+  margin: 20px auto; /* Horizontally center the container */
+  width: 80%; /* Adjust the width as needed (percentage or fixed value) */
+  max-width: 1000px; /* Optional: Set a maximum width */
 }
+
 
 p {
   margin-bottom: 20px;
@@ -280,6 +283,41 @@ section:nth-child(even) { /* For even sections, image right, description left */
     font-size: 16px; /* Adjust font size for smaller screens */
   }
 }
+
+
+/*----------------------------------------------------------------------------------------------*/
+/* Back to Top Button Styles */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  max-width: 100%;  /* Prevents the button from exceeding the width */
+}
+
+#backToTop:hover {
+  background-color: #0056b3;
+}
+
+/* Optional: To prevent the button from overflowing, especially on smaller screens */
+@media (max-width: 480px) {
+  #backToTop {
+    right: 10px;  /* Adjust position for smaller screens */
+    bottom: 15px;
+    padding: 8px 12px; /* Smaller padding for better fit */
+  }
+}
+
+
 
 /*----------------------------------------------------------------------------------------------*/
 /* Our Story Section */
@@ -414,6 +452,69 @@ h1 {
   width: 100%;
   height: 300px; /* Adjust height as needed */
 }
+
+/* Mobile Version */
+@media screen and (max-width: 768px) {
+  body {
+    background-size: cover;
+  }
+  
+  header {
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  nav {
+    flex-direction: column;
+  }
+  
+  nav a {
+    margin: 10px 0;
+  }
+
+  .container-box {
+    width: 90%; /* Adjust container width for mobile */
+    padding: 10px;
+  }
+
+  .social-media-bottom {
+    gap: 30px; /* Reduce gap between icons */
+    bottom: 10px;
+  }
+
+  .main-us {
+    gap: 10px; /* Reduce gap between sections */
+  }
+
+  section {
+    flex-direction: column; /* Stack image and text vertically */
+  }
+
+  section img {
+    width: 100%; /* Full width on mobile */
+  }
+
+  section .description {
+    width: 100%; /* Full width for description */
+    padding: 10px;
+  }
+
+  .social-name {
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(2, 
+
+
+
+
+
+
+
+
+
 
 
 
